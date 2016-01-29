@@ -15,15 +15,15 @@ $(document).ready(function()
 	{
 		$("p.hello").hide();
 	});
-
+//focus 
     $("input").focus(function(){
         $(this).css("background-color", "#cccccc");
     });
-
+//blur
     $("input").blur(function(){
         $(this).css("background-color", "#ffffff");
 	});
-
+//fading method
     $("button.fadeout").click(function(){
     	$("#div1").fadeOut(1000);
     	$("#div2").fadeOut(2000);
@@ -40,5 +40,9 @@ $(document).ready(function()
     	$("#div3").fadeToggle(3000);
     });
 
-	
+        $("#get").click(function()
+        {
+        var first_name = $("#name").val();
+        $("#fname").text(first_name);     	
+        });
 });

@@ -2,7 +2,8 @@
 require("header_reg.php");
 require("registration_validation.php")
 ?>
-<script type="text/javascript" src="js/registration_validation.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/registration_validation_jquery.js"></script>
 <div class="container">
 	<div class="respnosive">
 		<div class="jumbotron">
@@ -15,7 +16,7 @@ require("registration_validation.php")
 	<div class="container">
 		<div class="respnosive">
 			<!-- Form going to insert_data page-->
-			<form action="registration.php" enctype="multipart/form-data" onsubmit="return validate()" method="POST">
+			<form id="registration_form" action="registration.php" enctype="multipart/form-data" method="POST">
 				
 					<div class="col-sm-4"><b>First name</b> <br/><input id="first_name" type=text value="<?php echo "{$_POST['first_name']}";?>" name="first_name" placeholder="First Name"> 
 					</div>
@@ -125,7 +126,7 @@ require("registration_validation.php")
 				
 				<div class="col-sm-4"><b>Write something(140 words)</b><br/><textarea name="comment" placeholder="Comment here in 140 words" rows="4" cols="30"></textarea></div>
 				<br/>	
-				<div class="col-sm-4"><input id=""  type="submit" value="Submit" name="submit" style="width:175px"></div>
+				<div class="col-sm-4"><input id="submit"  type="submit" value="Submit" name="submit" style="width:175px"></div>
 				<div class="col-sm-4"><input id="" type="file" value="image" name="image"  accept="image/x-png, image/gif, image/jpeg"></div>
 
 			</form>	
